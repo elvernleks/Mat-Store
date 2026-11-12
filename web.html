@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Furina Jasa Genshin Impact | Jasa Terpercaya</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 50%, #0d2137 100%);
+color: #e0f7ff;
+overflow-x: hidden;
+}
+
+/* ===== ANIMASI ===== */
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+0%, 100% { text-shadow: 0 0 20px rgba(100, 200, 255, 0.5); }
+50% { text-shadow: 0 0 40px rgba(100, 200, 255, 0.8); }
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bubble {
+0% { transform: translateY(0); opacity: 0; }
+50% { opacity: 0.3; }
+100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* ===== BACKGROUND BUBBLES ===== */
+.bubbles {
+position: fixed;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 0;
+overflow: hidden;
+}
+
+.bubble {
+position: absolute;
+bottom: -100px;
+background: radial-gradient(circle, rgba(56, 189, 248, 0.3), transparent);
+border-radius: 50%;
+animation: bubble 20s linear infinite;
+}
+
+.bubble:nth-child(1) { left: 10%; width: 20px; height: 20px; animation-delay: 0s; }
+.bubble:nth-child(2) { left: 25%; width: 40px; height: 40px; animation-delay: 4s; }
+.bubble:nth-child(3) { left: 40%; width: 15px; height: 15px; animation-delay: 2s; }
+.bubble:nth-child(4) { left: 55%; width: 30px; height: 30px; animation-delay: 6s; }
+.bubble:nth-child(5) { left: 70%; width: 50px; height: 50px; animation-delay: 8s; }
+.bubble:nth-child(6) { left: 85%; width: 25px; height: 25px; animation-delay: 3s; }
+.bubble:nth-child(7) { left: 15%; width: 35px; height: 35px; animation-delay: 10s; }
+.bubble:nth-child(8) { left: 90%; width: 45px; height: 45px; animation-delay: 5s; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #0a1628;
+}
+
+::-webkit-scrollbar-thumb {
+background: linear-gradient(180deg, #38bdf8, #1d4ed8);
+border-radius: 5px;
+}
+
+::selection {
+background: rgba(56, 189, 248, 0.3);
+color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+background: rgba(10, 22, 40, 0.95);
+backdrop-filter: blur(10px);
+padding: 15px 50px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+width: 100%;
+z-index: 1000;
+box-shadow: 0 2px 20px rgba(0, 150, 255, 0.2);
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
+font-size: 24px;
+font-weight: bold;
+color: #7dd3fc;
+text-decoration: none;
+}
+
+.logo-icon {
+width: 45px;
+height: 45px;
+border-radius: 50%;
+background: radial-gradient(circle, #38bdf8, #1d4ed8);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+.nav-links {
+display: flex;
+gap: 30px;
+list-style: none;
+}
+
+.nav-links a {
+color: #bae6fd;
+text-decoration: none;
+font-size: 16px;
+transition: all 0.3s;
+padding: 8px 15px;
+border-radius: 20px;
+}
+
+.nav-links a:hover {
+background: rgba(56, 189, 248, 0.2);
+color: #7dd3fc;
+box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+.nav-cta {
+background: linear-gradient(135deg, #38bdf8, #1d4ed8);
+padding: 10px 20px;
+border-radius: 25px;
+font-weight: 600;
+color: white !important;
+box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.nav-cta:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+}
+
+.hamburger {
+display: none;
+font-size: 24px;
+cursor: pointer;
+color: #7dd3fc;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+padding: 100px 50px 50px;
+background: radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.1) 0%, transparent 60%);
+}
+
+.hero-content {
+text-align: center;
+max-width: 800px;
+position: relative;
+z-index: 2;
+animation: fadeIn 1s ease-out;
+}
+
+.hero-badge {
+display: inline-block;
+background: rgba(56, 189, 248, 0.15);
+border: 1px solid rgba(91, 193, 236, 0.3);
+padding: 8px 20px;
+border-radius: 20px;
+font-size: 14px;
+color: #7dd3fc;
+margin-bottom: 20px;
+backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+font-size: 4rem;
+font-weight: 800;
+margin-bottom: 20px;
+animation: glow 3s ease-in-out infinite;
+background: linear-gradient(135deg, #649fe7, #649fe7, #649fe7);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.hero p {
+font-size: 1.2rem;
+color: #bae6fd;
+margin-bottom: 30px;
+line-height: 1.8;
+}
+
+.hero-buttons {
+display: flex;
+gap: 20px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+padding: 15px 35px;
+border-radius: 30px;
+font-size: 16px;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.3s;
+border: none;
+cursor: pointer;
+}
+
+.btn-primary {
+background: linear-gradient(135deg, #38bdf8, #1d4ed8);
+color: white;
+box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+}
+
+.btn-primary:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 30px rgba(56, 189, 248, 0.5);
+}
+
+.btn-secondary {
+background: rgba(56, 189, 248, 0.1);
+color: #7dd3fc;
+border: 1px solid rgba(56, 189, 248, 0.3);
+backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+background: rgba(56, 189, 248, 0.2);
+transform: translateY(-3px);
+}
+
+/* ===== STATS ===== */
+.stats {
+display: flex;
+justify-content: center;
+gap: 50px;
+margin-top: 50px;
+padding: 30px 0;
+flex-wrap: wrap;
+}
+
+.stat-item {
+text-align: center;
+}
+
+.stat-number {
+font-size: 2.5rem;
+font-weight: 800;
+color: #7dd3fc;
+}
+
+.stat-label {
+font-size: 14px;
+color: #bae6fd;
+margin-top: 5px;
+}
+
+.furina-character {
+position: absolute;
+right: 10%;
+bottom: 10%;
+font-size: 100px;
+animation: float 3s ease-in-out infinite;
+color: #38bdf8;
+opacity: 0.8;
+z-index: 1;
+text-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+}
+
+/* ===== SECTION UMUM ===== */
+.services, .features, .order-section {
+position: relative;
+z-index: 2;
+}
+
+.services {
+padding: 100px 50px;
+background: rgba(10, 22, 40, 0.5);
+backdrop-filter: blur(20px);
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.section-title h2 {
+font-size: 2.5rem;
+font-weight: 700;
+margin-bottom: 15px;
+color: #7dd3fc;
+}
+
+.section-title p {
+color: #94a3b8;
+font-size: 16px;
+max-width: 600px;
+margin: 0 auto;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.service-card {
+background: rgba(56, 189, 248, 0.05);
+border: 1px solid rgba(56, 189, 248, 0.1);
+border-radius: 20px;
+padding: 30px;
+transition: all 0.3s;
+position: relative;
+overflow: hidden;
+}
+
+.service-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
+transition: left 0.5s;
+}
+
+.service-card:hover::before {
+left: 100%;
+}
+
+.service-card:hover {
+transform: translateY(-10px);
+border-color: rgba(56, 189, 248, 0.3);
+box-shadow: 0 10px 40px rgba(56, 189, 248, 0.2);
+}
+
+.service-icon {
+width: 70px;
+height: 70px;
+background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(29, 78, 216, 0.2));
+border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 30px;
+margin-bottom: 20px;
+color: #38bdf8;
+}
+
+.service-name {
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 10px;
+color: #e2e8f0;
+}
+
+.service-desc {
+color: #94a3b8;
+font-size: 14px;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+
+.service-price {
+font-size: 20px;
+font-weight: 700;
+color: #38bdf8;
+margin-bottom: 20px;
+}
+
+.service-price span {
+font-size: 14px;
+color: #94a3b8;
+font-weight: 400;
+}
+
+.service-btn {
+width: 100%;
+padding: 12px;
+background: rgba(56, 189, 248, 0.1);
+border: 1px solid rgba(56, 189, 248, 0.3);
+border-radius: 10px;
+color: #7dd3fc;
+transition: all 0.3s;
+cursor: pointer;
+font-weight: 500;
+font-family: inherit;
+font-size: 14px;
+}
+
+.service-btn:hover {
+background: rgba(56, 189, 248, 0.2);
+box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+padding: 100px 50px;
+}
+
+.features-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.feature-item {
+text-align: center;
+padding: 40px 20px;
+}
+
+.feature-icon {
+font-size: 50px;
+margin-bottom: 20px;
+color: #38bdf8;
+}
+
+.feature-title {
+font-size: 18px;
+font-weight: 600;
+margin-bottom: 10px;
+color: #e2e8f0;
+}
+
+.feature-desc {
+color: #94a3b8;
+font-size: 14px;
+line-height: 1.6;
+}
+
+/* ===== ORDER FORM SECTION ===== */
+.order-section {
+padding: 100px 50px;
+background: rgba(10, 22, 40, 0.5);
+backdrop-filter: blur(20px);
+}
+
+.order-container {
+max-width: 800px;
+margin: 0 auto;
+background: rgba(56, 189, 248, 0.05);
+border: 1px solid rgba(56, 189, 248, 0.1);
+border-radius: 30px;
+padding: 40px;
+backdrop-filter: blur(20px);
+}
+
+.order-form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+}
+
+.form-group label {
+margin-bottom: 8px;
+color: #bae6fd;
+font-size: 14px;
+font-weight: 500;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+padding: 12px 15px;
+background: rgba(10, 22, 40, 0.8);
+border: 1px solid rgba(56, 189, 248, 0.2);
+border-radius: 10px;
+color: #e2e8f0;
+font-size: 15px;
+transition: all 0.3s;
+font-family: inherit;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+outline: none;
+border-color: #38bdf8;
+box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.form-group select option {
+background: #0a1628;
+color: #e2e8f0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+background: rgba(10, 22, 40, 0.9);
+text-align: center;
+padding: 30px 20px;
+margin-top: 50px;
+position: relative;
+z-index: 2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+.navbar {
+padding: 15px 20px;
+}
+
+.nav-links {
+display: none;
+position: absolute;
+top: 70px;
+left: 0;
+right: 0;
+background: rgba(10, 22, 40, 0.98);
+flex-direction: column;
+padding: 20px;
+gap: 10px;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links.active {
+display: flex;
+}
+
+.hamburger {
+display: block;
+}
+
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.hero {
+padding: 100px 20px 50px;
+}
+
+.furina-character {
+display: none;
+}
+
+.stats {
+gap: 30px;
+}
+
+.stat-number {
+font-size: 2rem;
+}
+
+.services, .features, .order-section {
+padding: 60px 20px;
+}
+
+.order-container {
+padding: 25px;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== BACKGROUND BUBBLES ===== -->
+<div class="bubbles">
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+<a href="#" class="logo">
+<div class="logo-icon">
+<i class="fas fa-droplet"></i>
+</div>
+Furina<span style="color: #38bdf8;">Jasa</span>
+</a>
+<ul class="nav-links">
+<li><a href="#home">Beranda</a></li>
+<li><a href="#services">Layanan</a></li>
+<li><a href="#features">Keunggulan</a></li>
+<li><a href="#order">Pesan</a></li>
+<li><a href="#contact">Kontak</a></li>
+<li><a href="#order" class="nav-cta">Order Sekarang</a></li>
+</ul>
+<div class="hamburger" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="hero-badge">
+<i class="fas fa-shield-halved"></i> 100% Aman & Trusted
+</div>
+<h1>Jasa Genshin Impact<br>Terpercaya</h1>
+<p>Solusi lengkap untuk kebutuhan akun Genshin Impact kamu. Ditangani oleh tim profesional berpengalaman, cepat, aman, dan terpercaya.</p>
+<div class="hero-buttons">
+<a href="#order" class="btn-primary">
+<i class="fas fa-shopping-cart"></i> Pesan Sekarang
+</a>
+<a href="#services" class="btn-secondary">
+<i class="fas fa-list"></i> Lihat Layanan
+</a>
+</div>
+<div class="stats">
+<div class="stat-item">
+<div class="stat-number">500+</div>
+<div class="stat-label">Order Selesai</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">4.9/5</div>
+<div class="stat-label">Rating Kepuasan</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">24/7</div>
+<div class="stat-label">Support Aktif</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">100%</div>
+<div class="stat-label">Anti Racun</div>
+</div>
+</div>
+</div>
+<div class="furina-character">
+<i class="fas fa-water"></i>
+</div>
+</section>
+
+<!-- ===== SERVICES SECTION ===== -->
+<section class="services" id="services">
+<div class="section-title">
+<h2><i class="fas fa-store"></i> Layanan Kami</h2>
+<p>Berbagai layanan lengkap untuk kebutuhan Genshin Impact kamu di server Global</p>
+</div>
+<div class="services-grid">
+
+<!-- Service 1: Top Up -->
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-gem"></i>
+</div>
+<h3 class="service-name">Top Up Genesis Crystal</h3>
+<p class="service-desc">Top up Genesis Crystal murah dan cepat. Proses otomatis dalam 5-15 menit. Tersedia semua nominal dari 60 sampai 6480+ bonus.</p>
+<div class="service-price">Rp 10.000 <span>mulai dari</span></div>
+<button class="service-btn" onclick="selectService('Top Up Genesis Crystal')">Pilih Layanan</button>
+</div>
+
+<!-- Service 2: Battle Pass -->
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-sword"></i>
+</div>
+<h3 class="service-name">Battle Pass & Blessing</h3>
+<p class="service-desc">Gnostic Hymn, Gnostic Chorus, atau Welkin Moon. Langsung masuk ke akun tanpa perlu repot.</p>
+<div class="service-price">Rp 75.000 <span>mulai dari</span></div>
+<button class="service-btn" onclick="selectService('Battle Pass & Blessing')">Pilih Layanan</button>
+</div>
+
+<!-- Service 3: Joki -->
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-trophy"></i>
+</div>
+<h3 class="service-name">Joki Spiral Abyss</h3>
+<p class="service-desc">Bantu selesaikan Spiral Abyss sampai bintang 36/36. Tim pro dengan build character meta.</p>
+<div class="service-price">Rp 50.000 <span>mulai dari</span></div>
+<button class="service-btn" onclick="selectService('Joki Spiral Abyss')">Pilih Layanan</button>
+</div>
+
+<!-- Service 4: Jasa Farm -->
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-leaf"></i>
+</div>
+<h3 class="service-name">Jasa Farm Material</h3>
+<p class="service-desc">Farm material karakter, talent, weapon, dan artifact. Request karakter apa saja.</p>
+<div class="service-price">Rp 30.000 <span>mulai dari</span></div>
+<button class="service-btn" onclick="selectService('Jasa Farm Material')">Pilih Layanan</button>
+</div>
+
+<!-- Service 5: Jasa Explorasi -->
+<div class="service-card">
+<div class="service-icon">
+<i class="fas fa-map"></i>
+</div>
+<h3 class="service-name">Jasa Explorasi Map</h3>
+<p class="service-desc">Buka semua chest, quest, dan area tersembunyi di map. Bisa request wilayah tertentu.</p>
+<div class="service-price">Rp 40.000 <span>mulai dari</span></div>
+<button class="service-btn" onclick="selectService('Jasa Explorasi Map')">Pilih Layanan</button>
+</div>
+<p class="service-desc">100% explorasi area, semua chest, oculi, dan puzzle. Area baru langsung bisa dikerjakan.</p>
+                <div class="service-price">Rp 45.000 <span>mulai dari</span></div>
+                <button class="service-btn" onclick="selectService('Jasa Explorasi Map')">Pilih Layanan</button>
+            </div>
+
+            <!-- Service 6: Jasa Daily -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3 class="service-name">Jasa Daily & Event</h3>
+                <p class="service-desc">Daily commission, event, dan battle pass harian dikerjakan setiap hari. Aman dan rapi.</p>
+                <div class="service-price">Rp 15.000 <span>per hari</span></div>
+                <button class="service-btn" onclick="selectService('Jasa Daily & Event')">Pilih Layanan</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FEATURES SECTION ===== -->
+    <section class="features" id="features">
+        <div class="section-title">
+            <h2><i class="fas fa-medal"></i> Kenapa Pilih Kami?</h2>
+            <p>Keunggulan yang membuat kami dipercaya ribuan pelanggan</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="feature-title">Proses Cepat</h3>
+                <p class="feature-desc">Order diproses dalam hitungan menit. Tim kami selalu siaga dan responsif.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <h3 class="feature-title">100% Aman</h3>
+                <p class="feature-desc">Akun tetap aman, tanpa racun, tanpa risiko. Dilindungi garansi penuh.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="feature-title">CS 24/7</h3>
+                <p class="feature-desc">Customer service siap melayani kapanpun. Chat langsung di WhatsApp atau Instagram.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <h3 class="feature-title">Harga Bersahabat</h3>
+                <p class="feature-desc">Harga terbaik di kelasnya. Dapatkan diskon untuk order rutin dan jumlah besar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ORDER FORM SECTION ===== -->
+    <section class="order-section" id="order">
+        <div class="section-title">
+            <h2><i class="fas fa-cart-plus"></i> Form Pemesanan</h2>
+            <p>Isi form di bawah ini, orderan kamu akan langsung terkirim ke WhatsApp kami</p>
+        </div>
+        <div class="order-container">
+            <form class="order-form" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama kamu" required>
+                </div>
+                <div class="form-group">
+                    <label for="layanan">Pilih Layanan</label>
+                    <select id="layanan" name="layanan" required>
+                        <option value="">-- Pilih Layanan --</option>
+                        <option value="Top Up Genesis Crystal">Top Up Genesis Crystal</option>
+                        <option value="Battle Pass & Blessing">Battle Pass & Blessing</option>
+                        <option value="Joki Spiral Abyss">Joki Spiral Abyss</option>
+                        <option value="Jasa Farm Material">Jasa Farm Material</option>
+                        <option value="Jasa Explorasi Map">Jasa Explorasi Map</option>
+                        <option value="Jasa Daily & Event">Jasa Daily & Event</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="uid">UID Genshin Impact</label>
+                    <input type="text" id="uid" name="uid" placeholder="Contoh: 888888888" required>
+                </div>
+                <div class="form-group">
+                    <label for="region">Region / Server</label>
+                    <select id="region" name="region" required>
+                        <option value="">-- Pilih Server --</option>
+                        <option value="America">America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="TW/HK/MO">TW/HK/MO</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="detail">Detail Orderan</label>
+                    <textarea id="detail" name="detail" rows="4" placeholder="Contoh: Top up 6480 genesis crystal, top up welkin 1 bulan, dll." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="kontak">Nomor WhatsApp</label>
+                    <input type="text" id="kontak" name="kontak" placeholder="Contoh: 085737378135" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Kirim Pesanan via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="features" id="contact">
+        <div class="section-title">
+            <h2><i class="fas fa-address-book"></i> Hubungi Kami</h2>
+            <p>Lebih suka chat langsung? Hubungi kami di bawah ini</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                <a href="https://wa.me/6282123456789" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="padding: 30px;">
+                        <div class="service-icon" style="margin: 0 auto 15px;">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 class="service-name">WhatsApp</h3>
+                        <p class="service-desc">0857-3737-8135</p>
+                    </div>
+                </a>
+                <a href="https://instagram.com/furinajasa.gi" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="padding: 30px;">
+                        <div class="service-icon" style="margin: 0 auto 15px;">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3 class="service-name">Instagram</h3>
+                        <p class="service-desc">@MX.PMDIII</p>
+                    </div>
+                </a>
+                <a href="https://discord.com" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="padding: 30px;">
+                        <div class="service-icon" style="margin: 0 auto 15px;">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3 class="service-name">Discord</h3>
+                        <p class="service-desc">furinajasa#0001</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div style="margin-bottom: 15px;">
+            <div class="logo" style="justify-content: center; margin-bottom: 10px;">
+                <div class="logo-icon">
+                    <i class="fas fa-droplet"></i>
+                </div>
+                Furina<span style="color: #38bdf8;">Jasa</span>
+            </div>
+            <p style="color: #94a3b8; font-size: 14px;">Jasa Genshin Impact Terpercaya & Aman</p>
+        </div>
+        <div style="border-top: 1px solid rgba(56, 189, 248, 0.2); padding-top: 20px;">
+            <p style="color: #94a3b8; font-size: 13px;">
+                &copy; 2024 FurinaJasa. All rights reserved. Made with <i class="fas fa-heart" style="color: #38bdf8;"></i>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== FUNCTION TOGGLE MENU =====
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // ===== FUNCTION SELECT SERVICE =====
+        function selectService(serviceName) {
+            const selectLayanan = document.getElementById('layanan');
+            selectLayanan.value = serviceName;
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // ===== FUNCTION SUBMIT ORDER =====
+        function submitOrder(event) {
+            event.preventDefault();
+
+            const nama = document.getElementById('nama').value;
+            const layanan = document.getElementById('layanan').value;
+            const uid = document.getElementById('uid').value;
+            const region = document.getElementById('region').value;
+            const detail = document.getElementById('detail').value;
+            const kontak = document.getElementById('kontak').value;
+
+            // GANTI NOMOR WA DI BAWAH INI DENGAN NOMOR KAMU (format 62xxx)
+            const nomorWA = '085737378135';
+
+            const pesan = `Halo FurinaJasa, saya ingin order%0A%0A` +
+                `*Nama:* ${nama}%0A` +
+                `*Layanan:* ${layanan}%0A` +
+                `*UID:* ${uid}%0A` +
+                `*Region:* ${region}%0A` +
+                `*Detail:* ${detail}%0A` +
+                `*Kontak:* ${kontak}%0A%0A` +
+                `Mohon diproses ya, terima kasih!`;
+
+            const urlWA = `https://wa.me/${nomorWA}?text=${pesan}`;
+            window.open(urlWA, '_blank');
+        }
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
